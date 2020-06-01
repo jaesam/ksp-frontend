@@ -1,25 +1,24 @@
 import React from 'react';
 import './App.css';
 
+// create index.js to export as a directory for refactoring
+import NavItem from './components/navbar/NavItem';
+import DropdownMenu from './components/navbar/DropdownMenu';
+import Navbar from './components/navbar/Navbar';
+
 function App() {
   return (
-    <article className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Fetus version of KSP Website
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+    <article>
+      <Navbar>
+        <NavItem icon="회사소개" />
+        <NavItem icon="제품소개" />
+        <NavItem icon="Contact" />
+        <NavItem icon="😃">
+          <DropdownMenu />
+        </NavItem>
+      </Navbar>
       <section className="bgv-container">
-        <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" autoPlay controls />
+        <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" autoPlay />
       </section>
       <section className="section2">
         <p>
