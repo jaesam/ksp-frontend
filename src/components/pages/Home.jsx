@@ -6,7 +6,7 @@ function Home() {
 
   useEffect(() => {
     setInProp(true);
-  });
+  }, []);
 
   return (
     <React.Fragment>
