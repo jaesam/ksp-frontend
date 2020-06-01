@@ -1,43 +1,50 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import './App.css';
 
 import { ReactComponent as Logo } from './icons/airbnb.svg';
+
+import Home from './components/pages/Home';
+import SamplePage from './components/pages/SamplePage';
+import ContactUs from './components/pages/ContactUs';
 
 // create index.js to export as a directory for refactoring
 import NavItem from './components/navbar/NavItem';
 import DropdownMenu from './components/navbar/DropdownMenu';
 import Navbar from './components/navbar/Navbar';
 
-
 function App() {
   return (
-    <article>
-      <Navbar>
-        <Logo />
-        <NavItem icon="회사소개" />
-        <NavItem icon="제품소개" />
-        <NavItem icon="Contact" />
-        <NavItem icon="😃">
-          <DropdownMenu />
-        </NavItem>
-      </Navbar>
-      <section className="bgv-container">
-        <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" autoPlay />
-      </section>
-      <section className="section1">
-        <p>
-          거래처
-        </p>
-      </section>
-      <section className="section2">
-        <p>
-          강점
-        </p>
-      </section>
-      <footer>
-        <h1>Contact Us</h1>
-      </footer>
-    </article>
+    <Router>
+      <article>
+        <Navbar>
+          <Logo />
+          <Link to="/company-introduction">
+            <NavItem icon="회사소개" />
+          </Link>
+          <Link to="/product-introduction">
+            <NavItem icon="제품소개" />
+          </Link>
+          <Link to="/contact">
+            <NavItem icon="Contact" />
+          </Link>
+          <NavItem icon="😃">
+            <DropdownMenu />
+          </NavItem>
+        </Navbar>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/company-introduction" component={SamplePage} />
+          <Route path="/product-introduction" component={SamplePage} />
+          <Route path="/contact" component={ContactUs} />
+        </Switch>
+      </article>
+    </Router>
   );
 }
 
