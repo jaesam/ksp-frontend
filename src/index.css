@@ -21,6 +21,19 @@ code {
   --speed: 500ms;
 }
 
+section {
+  height: 500px;
+}
+
+video {
+  height: 100%;
+  object-fit: cover;
+}
+
+footer {
+  height: 500px;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -30,4 +43,11 @@ ul {
 a {
   color: var(--text-color);
   text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+svg {
+  width: 30px;
+  height: 30px;
 }
