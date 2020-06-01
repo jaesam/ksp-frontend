@@ -1,3 +1,33 @@
+section {
+  height: 500px;
+}
+
+video {
+  height: 100%;
+  object-fit: cover;
+}
+
+footer {
+  height: 500px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+svg {
+  width: 30px;
+  height: 30px;
+}
 
 .section2 {
   background-color: #282c34;
@@ -46,7 +76,7 @@
 }
 
 .icon-button:hover {
-  filter: brightness(1.4); 
+  filter: brightness(1.4);
 }
 
 .dropdown {
@@ -113,7 +143,6 @@
 }
 
 .menu-secondary-exit {
-
 }
 
 .menu-secondary-exit-active {
