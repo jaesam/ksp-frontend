@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
+import ContactForm from "../ContactForm";
+import { ReactComponent as ContactUsImage } from "../../icons/contact.svg";
 
 function Home() {
   const [inProp, setInProp] = useState(false);
@@ -9,7 +11,7 @@ function Home() {
   }, []);
 
   return (
-    <React.Fragment>
+    <div className="home">
       <header className="video-header">
         <video
           src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
@@ -33,11 +35,18 @@ function Home() {
         <section className="section2">
           <p>강점</p>
         </section>
+        <section className="section3">
+          <p>공정 동영상</p>
+        </section>
         <footer>
-          <h1>Contact Us</h1>
+          <div>
+            <h2>Contact Us</h2>
+            <ContactForm />
+          </div>
+          <ContactUsImage />
         </footer>
       </main>
-    </React.Fragment>
+    </div>
   );
 }
 

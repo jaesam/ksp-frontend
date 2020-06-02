@@ -2,12 +2,22 @@ section {
   height: 500px;
 }
 
+/* Footer */
+
 footer {
-  height: 500px;
+  display: flex;
+  height: 50vh;
+  justify-content: space-between;
+  margin: 1rem;
+
+  svg {
+    width: 50vh;
+    height: 50vh;
+  }
 }
 
 .section2 {
-  background-color: #0e2367;
+  background-color: var(--primary-color);
   color: #ffffff;
 }
 
@@ -159,23 +169,25 @@ nav {
 
 /* Video Header */
 
-@mixin coverer {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+.home {
+  @mixin coverer {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
-.video-header {
-  position: absolute;
-  text-align: center;
-  width: 100vw;
-  height: 100vh;
-  &,
-  video,
-  .viewport-header {
-    @include coverer;
+  .video-header {
+    position: absolute;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    &,
+    video,
+    .viewport-header {
+      @include coverer;
+    }
   }
   video {
     object-fit: cover;
@@ -209,19 +221,19 @@ nav {
     opacity: 1;
     transition: opacity 5000ms;
   }
-}
 
-main {
-  background: white;
-  position: relative;
-  padding-top: 1rem;
-  margin-top: 100vh;
-  &::before {
-    content: "";
-    @include coverer;
-    top: -100vh;
-  }
-  p {
-    margin: 1rem auto;
+  main {
+    background: white;
+    position: relative;
+    padding-top: 1rem;
+    margin-top: 100vh;
+    &::before {
+      content: "";
+      @include coverer;
+      top: -100vh;
+    }
+    p {
+      margin: 1rem auto;
+    }
   }
 }
