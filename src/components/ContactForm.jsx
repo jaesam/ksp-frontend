@@ -1,23 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import axios from "axios";
+import { Formik } from "formik";
 
 function ContactForm() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [msg, setMsg] = useState("");
-
-  function handleSubmit(e) {
-    console.log("Submitted!");
-    e.preventDefault();
-
+  function handleSubmit(values) {
     axios({
       method: "POST",
-      url: "http://localhost:3000/send",
-      data: this.state
+      url: "http://localhost:3002/send",
+      data: values
     }).then(response => {
       if (response.data.status === "success") {
         alert("Message Sent.");
-        this.resetForm();
       } else if (response.data.status === "fail") {
         alert("Message failed to send.");
       }
@@ -25,39 +18,53 @@ function ContactForm() {
   }
 
   return (
-    <form id="contact-form" onSubmit={handleSubmit} method="POST">
-      <div className="form-group">
-        <label htmlFor="name">Name</label>
-        <input
-          type="text"
-          className="form-control"
-          value={name}
-          onChange={e => setName(e.value)}
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="exampleInputEmail1">Email address</label>
-        <input
-          type="email"
-          className="form-control"
-          aria-describedby="emailHelp"
-          value={email}
-          onChange={e => setEmail(e.value)}
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="message">Message</label>
-        <textarea
-          className="form-control"
-          rows="5"
-          value={msg}
-          onChange={e => setMsg(e.value)}
-        />
-      </div>
-      <button type="submit" className="btn btn-primary">
-        Submit
-      </button>
-    </form>
+    <Formik
+      initialValues={{
+        name: "",
+        email: "",
+        msg: ""
+      }}
+      onSubmit={handleSubmit}
+    >
+      {props => (
+        <form id="contact-form" onSubmit={props.handleSubmit} method="POST">
+          <div className="form-group">
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              className="form-control"
+              value={props.values.name}
+              name="name"
+              onChange={props.handleChange}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="exampleInputEmail1">Email address</label>
+            <input
+              type="email"
+              className="form-control"
+              aria-describedby="emailHelp"
+              value={props.values.email}
+              name="email"
+              onChange={props.handleChange}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="message">Message</label>
+            <textarea
+              className="form-control"
+              rows="5"
+              value={props.values.msg}
+              name="msg"
+              onChange={props.handleChange}
+            />
+          </div>
+          <button type="submit" className="btn btn-primary">
+            Submit
+          </button>
+        </form>
+      )}
+    </Formik>
   );
 }
 
