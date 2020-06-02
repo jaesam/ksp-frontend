@@ -14,9 +14,10 @@ code {
 
 :root {
   --primary-color: #0e2367;
+  --secondary-color: #2d5796;
   --text-color: #dadce1;
   --nav-size: 60px;
-  --border: 1px solid #474a4d;
+  --border: 1px solid #556372;
   --border-radius: 8px;
   --speed: 500ms;
 }

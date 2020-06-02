@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.scss";
 
 import { ReactComponent as Logo } from "./icons/airbnb.svg";
+import { ReactComponent as MenuIcon } from "./icons/menu.svg";
 
 import Home from "./components/pages/Home";
 import SamplePage from "./components/pages/SamplePage";
@@ -23,15 +24,15 @@ function App() {
           </Link>
           <div className="nav-item-container">
             <Link to="/company-introduction">
-              <NavItem icon="회사소개" />
+              <NavItem icon="1" />
             </Link>
             <Link to="/product-introduction">
-              <NavItem icon="제품소개" />
+              <NavItem icon="2" />
             </Link>
             <Link to="/contact">
-              <NavItem icon="Contact" />
+              <NavItem icon="3" />
             </Link>
-            <NavItem icon="😃">
+            <NavItem icon={<MenuIcon />}>
               <DropdownMenu />
             </NavItem>
           </div>

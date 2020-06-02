@@ -11,14 +11,9 @@ footer {
   margin: 1rem;
 
   svg {
-    width: 50vh;
+    width: 70vh;
     height: 50vh;
   }
-}
-
-.section2 {
-  background-color: var(--primary-color);
-  color: #ffffff;
 }
 
 nav {
@@ -75,13 +70,17 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    svg {
+      width: 80%;
+      fill: #ffffff;
+    }
   }
 
   .icon-button {
     --button-size: calc(var(--nav-size) * 0.5);
     width: var(--button-size);
     height: var(--button-size);
-    background-color: #484a4d;
+    background-color: var(--secondary-color);
     border-radius: 50%;
     padding: 5px;
     margin: 2px;
@@ -235,5 +234,22 @@ nav {
     p {
       margin: 1rem auto;
     }
+  }
+}
+
+.partnership {
+  svg {
+    width: 50vw;
+    height: 50vh;
+  }
+}
+
+.section2 {
+  background-color: var(--primary-color);
+  color: #ffffff;
+
+  svg {
+    width: 50vw;
+    height: 50vh;
   }
 }

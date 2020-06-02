@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 import ContactForm from "../ContactForm";
 import { ReactComponent as ContactUsImage } from "../../icons/contact.svg";
+import { ReactComponent as PartnershipImage } from "../../icons/partnership.svg";
 
 function Home() {
   const [inProp, setInProp] = useState(false);
@@ -29,8 +30,8 @@ function Home() {
       </header>
 
       <main>
-        <section className="section1">
-          <p>거래처</p>
+        <section className="partnership">
+          <PartnershipImage />
         </section>
         <section className="section2">
           <p>강점</p>

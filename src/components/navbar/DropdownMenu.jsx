@@ -14,7 +14,7 @@ function DropdownMenu() {
     /* eslint-disable */
     return (
       <a
-        href="#"
+        href="#/"
         className="menu-item"
         onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}
       >
