@@ -47,7 +47,7 @@ function Home() {
           <p>공정 동영상</p>
         </section>
         <footer>
-          <div>
+          <div className="contactForm-container">
             <h2>Contact Us</h2>
             <ContactForm />
           </div>

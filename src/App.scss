@@ -12,9 +12,23 @@ footer {
   justify-content: space-between;
   margin: 1rem;
 
+  input {
+    margin-bottom: 40%;
+  }
+
+  textarea {
+    width: 45vw;
+  }
+
   svg {
-    width: 70vh;
+    width: 50vw;
     height: 50vh;
+  }
+
+  .form-groups {
+    display: flex;
+    width: 60vw;
+    justify-content: space-between;
   }
 }
 
