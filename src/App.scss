@@ -1,5 +1,7 @@
 section {
   height: 500px;
+  margin: 1rem;
+  border: var(--border);
 }
 
 /* Footer */
@@ -238,18 +240,23 @@ nav {
 }
 
 .partnership {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
   svg {
-    width: 50vw;
-    height: 50vh;
+    width: 30vw;
+    height: 30vh;
   }
 }
 
 .section2 {
-  background-color: var(--primary-color);
-  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 
   svg {
-    width: 50vw;
-    height: 50vh;
+    width: 30vw;
+    height: 30vh;
   }
 }

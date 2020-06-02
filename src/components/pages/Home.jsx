@@ -2,7 +2,11 @@ import React, { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 import ContactForm from "../ContactForm";
 import { ReactComponent as ContactUsImage } from "../../icons/contact.svg";
+import { ReactComponent as WinnerImage } from "../../icons/winner.svg";
 import { ReactComponent as PartnershipImage } from "../../icons/partnership.svg";
+import { ReactComponent as EngineerImage } from "../../icons/engineer.svg";
+import { ReactComponent as TruckImage } from "../../icons/truck.svg";
+import { ReactComponent as TimeImage } from "../../icons/time.svg";
 
 function Home() {
   const [inProp, setInProp] = useState(false);
@@ -31,10 +35,13 @@ function Home() {
 
       <main>
         <section className="partnership">
+          <WinnerImage />
           <PartnershipImage />
         </section>
         <section className="section2">
-          <p>강점</p>
+          <EngineerImage />
+          <TruckImage />
+          <TimeImage />
         </section>
         <section className="section3">
           <p>공정 동영상</p>
