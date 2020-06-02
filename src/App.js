@@ -18,19 +18,23 @@ function App() {
     <Router>
       <article>
         <Navbar>
-          <Logo />
-          <Link to="/company-introduction">
-            <NavItem icon="회사소개" />
+          <Link to="/" className="logo-container">
+            <Logo />
           </Link>
-          <Link to="/product-introduction">
-            <NavItem icon="제품소개" />
-          </Link>
-          <Link to="/contact">
-            <NavItem icon="Contact" />
-          </Link>
-          <NavItem icon="😃">
-            <DropdownMenu />
-          </NavItem>
+          <div className="nav-item-container">
+            <Link to="/company-introduction">
+              <NavItem icon="회사소개" />
+            </Link>
+            <Link to="/product-introduction">
+              <NavItem icon="제품소개" />
+            </Link>
+            <Link to="/contact">
+              <NavItem icon="Contact" />
+            </Link>
+            <NavItem icon="😃">
+              <DropdownMenu />
+            </NavItem>
+          </div>
         </Navbar>
         <Switch>
           <Route exact path="/" component={Home} />

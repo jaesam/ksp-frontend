@@ -7,7 +7,7 @@ footer {
 }
 
 .section2 {
-  background-color: #282c34;
+  background-color: #0e2367;
   color: #ffffff;
 }
 
@@ -32,7 +32,6 @@ nav {
   svg {
     width: 30px;
     height: 30px;
-    margin-right: auto;
   }
 
   ul {
@@ -53,7 +52,11 @@ nav {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
+  }
+
+  .nav-item-container {
+    display: flex;
   }
 
   .nav-item {

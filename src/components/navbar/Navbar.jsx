@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router";
 import classnames from "classnames";
 
 function Navbar(props) {
   const [activeNav, setActiveNav] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     window.addEventListener("scroll", onScroll);
@@ -21,7 +23,7 @@ function Navbar(props) {
   return (
     <nav
       className={classnames("navbar", {
-        "navbar--hidden": !activeNav
+        "navbar--hidden": !activeNav && location.pathname === "/"
       })}
     >
       <ul className="navbar-nav"> {props.children} </ul>
