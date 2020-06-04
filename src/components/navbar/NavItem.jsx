@@ -5,7 +5,7 @@ function NavItem(props) {
 
   /* eslint-disable */
   return (
-    <li className="nav-item">
+    <li className={`nav-item ${props.className}`}>
       <a href="#!" className="icon-button" onClick={() => setOpen(!open)}>
         {props.icon}
       </a>

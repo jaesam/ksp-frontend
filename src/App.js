@@ -22,7 +22,7 @@ function App() {
           <Link to="/" className="logo-container">
             <Logo />
           </Link>
-          <div className="nav-item-container">
+          <div className="flex desktop-only">
             <Link to="/company-introduction">
               <NavItem icon="1" />
             </Link>
@@ -32,10 +32,10 @@ function App() {
             <Link to="/contact">
               <NavItem icon="3" />
             </Link>
-            <NavItem icon={<MenuIcon />}>
-              <DropdownMenu />
-            </NavItem>
           </div>
+          <NavItem icon={<MenuIcon />} className="mobile-only">
+            <DropdownMenu />
+          </NavItem>
         </Navbar>
         <Switch>
           <Route exact path="/" component={Home} />
