@@ -7,6 +7,7 @@ import { ReactComponent as PartnershipImage } from "../../icons/partnership.svg"
 import { ReactComponent as EngineerImage } from "../../icons/engineer.svg";
 import { ReactComponent as TruckImage } from "../../icons/truck.svg";
 import { ReactComponent as TimeImage } from "../../icons/time.svg";
+import Divider from "../Divider";
 
 function Home() {
   const [inProp, setInProp] = useState(false);
@@ -34,8 +35,8 @@ function Home() {
       </header>
 
       <main>
-        <section className="about">
-          <div className="text-box">
+        <section className="about justify-space-between">
+          <div className="col-6 m-l-15">
             <h1>초정밀 극박판의 선두주자</h1>
             <p>
               저희는 현재 초정밀 초박판 스테인리스 제품 생산을 위해 생산현장을
@@ -51,17 +52,71 @@ function Home() {
               위한 끊임없는 노력을 경주하고 있습니다
             </p>
           </div>
-          <WinnerImage />
-          <PartnershipImage />
+          <div className="flex col-5">
+            <WinnerImage />
+          </div>
         </section>
-        <section className="section2">
-          <EngineerImage />
-          <TruckImage />
-          <TimeImage />
+
+        <Divider />
+
+        <section className="product">
+          <h1>납품중인 제품들</h1>
+          <h1>납품 가능한 제품들</h1>
+          <h1>미래를 위해 연구 및 개발중인 제품들</h1>
         </section>
-        <section className="section3">
-          <p>공정 동영상</p>
+
+        <Divider />
+
+        <section className="strength">
+          <h1>KSP STEEL 의 강점</h1>
+          <div className="flex justify-space-between">
+            <div className="col-3 m-l-15">
+              <EngineerImage />
+              <p>
+                저희는 현재 초정밀 초박판 스테인리스 제품 생산을 위해 생산현장을
+                Clean Room화하고있으며, 제품 표면 형상교정 및 균일한 응력 유지에
+                필요한 정밀 생산 설비를 도입 하여 지금까지 일본 및 미국 등
+                선진국에서 수입해야 했던 첨단 부품소재를 국산화하며 더 나아가
+                세계 각국에 수출 하겠다는 야심찬 계획을 실현해 나가고 있습니다.
+              </p>
+            </div>
+            <div className="col-3">
+              <TruckImage />
+              <p>
+                저희는 현재 초정밀 초박판 스테인리스 제품 생산을 위해 생산현장을
+                Clean Room화하고있으며, 제품 표면 형상교정 및 균일한 응력 유지에
+                필요한 정밀 생산 설비를 도입 하여 지금까지 일본 및 미국 등
+                선진국에서 수입해야 했던 첨단 부품소재를 국산화하며 더 나아가
+                세계 각국에 수출 하겠다는 야심찬 계획을 실현해 나가고 있습니다.
+              </p>
+            </div>
+            <div className="col-3 m-r-15">
+              <TimeImage />
+              <p>
+                저희는 현재 초정밀 초박판 스테인리스 제품 생산을 위해 생산현장을
+                Clean Room화하고있으며, 제품 표면 형상교정 및 균일한 응력 유지에
+                필요한 정밀 생산 설비를 도입 하여 지금까지 일본 및 미국 등
+                선진국에서 수입해야 했던 첨단 부품소재를 국산화하며 더 나아가
+                세계 각국에 수출 하겠다는 야심찬 계획을 실현해 나가고 있습니다.
+              </p>
+            </div>
+          </div>
         </section>
+
+        <Divider />
+
+        <section className="partners">
+          <h1>Trusted with...</h1>
+          <div className="flex">
+            <TimeImage />
+            <TimeImage />
+            <TimeImage />
+            <TimeImage />
+          </div>
+        </section>
+
+        <Divider />
+
         <footer>
           <div className="contactForm-container">
             <h2>Contact Us</h2>
