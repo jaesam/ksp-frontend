@@ -5,9 +5,9 @@ section {
   margin-bottom: 15vh;
 }
 
-/* Footer */
+/* Contact */
 
-footer {
+.contact {
   display: flex;
   height: 50vh;
   justify-content: space-between;
@@ -50,6 +50,11 @@ nav {
   background-color: var(--primary-color);
   padding: 0 1rem;
   border-bottom: var(--border);
+
+  img {
+    width: 150px;
+    height: 50px;
+  }
 
   svg {
     width: 30px;
@@ -179,7 +184,7 @@ nav {
   }
 }
 
-/* Video Header */
+/* Home */
 
 .home {
   @mixin coverer {
@@ -281,6 +286,19 @@ nav {
   svg {
     width: 20vw;
     height: 20vh;
+  }
+}
+
+.partners {
+  text-align: center;
+
+  h1 {
+    font-size: 4vw;
+  }
+
+  svg {
+    width: 10vw;
+    height: 10vh;
   }
 }
 

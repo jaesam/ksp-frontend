@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.scss";
 
-import { ReactComponent as Logo } from "./icons/airbnb.svg";
+import Logo from "./icons/logo.png";
 import { ReactComponent as MenuIcon } from "./icons/menu.svg";
 
 import Home from "./components/pages/Home";
@@ -20,7 +20,7 @@ function App() {
       <article>
         <Navbar>
           <Link to="/" className="logo-container">
-            <Logo />
+            <img src={Logo} alt="logo" />
           </Link>
           <div className="flex desktop-only">
             <Link to="/company-introduction">
@@ -43,6 +43,7 @@ function App() {
           <Route path="/product-introduction" component={SamplePage} />
           <Route path="/contact" component={ContactUs} />
         </Switch>
+        <footer></footer>
       </article>
     </Router>
   );

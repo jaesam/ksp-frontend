@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
-import ContactForm from "../ContactForm";
-import { ReactComponent as ContactUsImage } from "../../icons/contact.svg";
 import { ReactComponent as WinnerImage } from "../../icons/winner.svg";
 import { ReactComponent as PartnershipImage } from "../../icons/partnership.svg";
 import { ReactComponent as EngineerImage } from "../../icons/engineer.svg";
 import { ReactComponent as TruckImage } from "../../icons/truck.svg";
 import { ReactComponent as TimeImage } from "../../icons/time.svg";
+import { ReactComponent as Samsung } from "../../icons/samsung.svg";
+import { ReactComponent as Lg } from "../../icons/lg.svg";
+import { ReactComponent as Hyundai } from "../../icons/hyundai.svg";
+import { ReactComponent as QuestionMark } from "../../icons/question.svg";
 import Divider from "../Divider";
 
 function Home() {
@@ -107,23 +110,17 @@ function Home() {
 
         <section className="partners">
           <h1>Trusted with...</h1>
-          <div className="flex">
-            <TimeImage />
-            <TimeImage />
-            <TimeImage />
-            <TimeImage />
+          <div className="flex justify-space-between">
+            <Samsung />
+            <Lg />
+            <Hyundai />
+            <Link to="/contact">
+              <QuestionMark />
+            </Link>
           </div>
         </section>
 
         <Divider />
-
-        <footer>
-          <div className="contactForm-container">
-            <h2>Contact Us</h2>
-            <ContactForm />
-          </div>
-          <ContactUsImage />
-        </footer>
       </main>
     </div>
   );
