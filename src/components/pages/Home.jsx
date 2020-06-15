@@ -10,6 +10,7 @@ import { ReactComponent as Samsung } from "../../icons/samsung.svg";
 import { ReactComponent as Lg } from "../../icons/lg.svg";
 import { ReactComponent as Hyundai } from "../../icons/hyundai.svg";
 import { ReactComponent as QuestionMark } from "../../icons/question.svg";
+import { ReactComponent as HandShake } from "../../icons/handshake.svg";
 import Divider from "../Divider";
 
 function Home() {
@@ -109,6 +110,7 @@ function Home() {
         <Divider />
 
         <section className="partners">
+          <HandShake />
           <h1>Trusted with...</h1>
           <div className="flex justify-space-between">
             <Samsung />
@@ -119,8 +121,6 @@ function Home() {
             </Link>
           </div>
         </section>
-
-        <Divider />
       </main>
     </div>
   );

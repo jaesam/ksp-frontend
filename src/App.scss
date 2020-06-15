@@ -1,8 +1,23 @@
+// @import "https://fonts.googleapis.com/css?family=Noto+Sans+KR#standard-styles";
+
 section {
   height: 500px;
   margin: 1rem;
   margin-top: 15vh;
   margin-bottom: 15vh;
+}
+
+footer {
+  height: 50vh;
+  align-content: center;
+  color: #ffffff;
+  background-color: var(--primary-color);
+
+  img {
+    width: 75%;
+    height: 75%;
+    margin: 1rem;
+  }
 }
 
 /* Contact */
@@ -256,6 +271,7 @@ nav {
 }
 
 .about {
+  // font-family: "Noto Sans KR";
   display: flex;
   align-items: center;
   justify-content: space-evenly;

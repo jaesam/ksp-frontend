@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.scss";
 
 import Logo from "./icons/logo.png";
+import KakaoMap from "./icons/map-placeholder.png";
 import { ReactComponent as MenuIcon } from "./icons/menu.svg";
 
 import Home from "./components/pages/Home";
@@ -43,7 +44,19 @@ function App() {
           <Route path="/product-introduction" component={SamplePage} />
           <Route path="/contact" component={ContactUs} />
         </Switch>
-        <footer></footer>
+        <footer className="flex">
+          <div className="col-6">
+            <h1>찾아오시는 길</h1>
+            <img src={KakaoMap} alt="map placeholder" />
+          </div>
+          <div className="col-6">
+            <div className="flex">
+              <span>이용약관</span>
+              <span>개인 정보 처리 방침</span>
+              <span>이메일 무단 수집 거부</span>
+            </div>
+          </div>
+        </footer>
       </article>
     </Router>
   );
