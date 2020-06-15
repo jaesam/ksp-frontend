@@ -50,11 +50,11 @@ function App() {
             <img src={KakaoMap} alt="map placeholder" />
           </div>
           <div className="col-6">
-            <div className="flex">
-              <span>이용약관</span>
-              <span>개인 정보 처리 방침</span>
-              <span>이메일 무단 수집 거부</span>
-            </div>
+            <ul>
+              <li>이용약관</li>
+              <li>개인 정보 처리 방침</li>
+              <li>이메일 무단 수집 거부</li>
+            </ul>
           </div>
         </footer>
       </article>

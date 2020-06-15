@@ -122,6 +122,7 @@ function Home() {
           </div>
         </section>
       </main>
+      <hr className="footer-divider" />
     </div>
   );
 }

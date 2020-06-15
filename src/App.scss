@@ -1,17 +1,15 @@
 // @import "https://fonts.googleapis.com/css?family=Noto+Sans+KR#standard-styles";
-
 section {
-  height: 500px;
-  margin: 1rem;
-  margin-top: 15vh;
-  margin-bottom: 15vh;
+  height: 100vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
 }
 
 footer {
+  position: relative;
   height: 50vh;
-  align-content: center;
-  color: #ffffff;
-  background-color: var(--primary-color);
+  color: var(--primary-color);
+  background-color: white;
 
   img {
     width: 75%;
@@ -232,7 +230,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 1;
 
     h1 {
       font-family: "Syncopate", sans-serif;
@@ -271,6 +268,13 @@ nav {
     p {
       margin: 1rem auto;
     }
+  }
+
+  .footer-divider {
+    position: relative;
+    background-color: white;
+    margin: 3vw;
+    border-top: 3px dotted var(--primary-color);
   }
 }
 
